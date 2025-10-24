@@ -1,4 +1,4 @@
-# CS2 Sdk Example  
+# CS2 SDK Example ( Raw base including the SDK & Dx Hook )
 
 ## Example CS2 Hook Using [xsip/cs2-sdk-offsets-interfaces-dump](https://github.com/xsip/cs2-sdk-offsets-interfaces-dump)  
 
@@ -17,6 +17,9 @@ git pull
 
 # Known Bugs
 If you unload using the DELETE key, and reinject, thex DX Hook can't be re-enabled. Everything else gets unhooked fine.
+
+# Preview  
+![Preview](https://raw.githubusercontent.com/xsip/CS2-SDK-EXAMPLE-V1/refs/heads/main/Preview.png "Preview")
 
 
 
