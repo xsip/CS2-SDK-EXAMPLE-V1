@@ -1,6 +1,8 @@
 #include <PCH/Internal.h>
 #include <fstream>
-#include <SDK/client/CBasePlayerController.hpp>
+#include <CS2/Interfaces/Include.h>
+#include <SDK/client/CCSPlayerController.hpp>
+#include <SDK/client/C_CSPlayerPawn.hpp>
 #include <Steam/GameOverlayRenderer.h>
 #include <Rendering/Renderer.h>
 #include <Utils/Utils.h>
@@ -9,7 +11,12 @@ auto pRenderer = new Renderer({});
 DWORD TestingThread(HMODULE hModule) {
 
     while (!GetAsyncKeyState(VK_DELETE)) {
-
+        if (GetAsyncKeyState(VK_LSHIFT) & 1) {
+            auto pGameEntitySystem = CS2::I::GetGameEntitySystem();
+            auto localController = pGameEntitySystem->GetEntityByIndex<CS2::client::CCSPlayerController>(1);
+            auto localPawn = pGameEntitySystem->GetEntityByIndex < CS2::client::C_CSPlayerPawn>(localController->m_hPawn.GetEntryIndex());
+            printf("Health: %i\n", localPawn->m_iHealth);
+        }
     }
 
     ::Utils::RemoveConsoleWindow();
@@ -32,6 +39,8 @@ void Setup(HMODULE hModule) {
     MH_Initialize();
 
     steam::GameOverlayRenderer::HookDX(pRenderer);
+
+    CS2::I::Initialize();
 
 }
 
