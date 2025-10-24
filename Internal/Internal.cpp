@@ -9,7 +9,7 @@
 #include <Utils/Utils.h>
 #include <CS2/Hooks/Client/GetMatrixForView.h>
 #include <CS2/Rendering/RenderObjects/EspRenderObject.h>
-
+#include <SDK/modellib/CBoneConstraintRbf.hpp>
 ViewMatrix_t Globals::viewMatrix;
 
 auto pRenderer = new Renderer({});
