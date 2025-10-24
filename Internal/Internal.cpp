@@ -2,6 +2,7 @@
 #include <fstream>
 #include <CS2/Interfaces/Include.h>
 #include <SDK/client/CCSPlayerController.hpp>
+#include <SDK/client/C4LightEffect_t.hpp>
 #include <SDK/client/C_CSPlayerPawn.hpp>
 #include <Steam/GameOverlayRenderer.h>
 #include <Rendering/Renderer.h>
