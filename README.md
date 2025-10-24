@@ -1,7 +1,8 @@
-# CS2 SDK Example ( Raw base including the SDK & Dx Hook )
+# CS2 SDK Example
 
 ## Example CS2 Hook Using [xsip/cs2-sdk-offsets-interfaces-dump](https://github.com/xsip/cs2-sdk-offsets-interfaces-dump)  
-
+This base includes DX Hook using gameoverlayrenderer and CGameEntitySystem interface,  
+as well as a example on how to use the SDK by retrieving the Local Player's health. 
 # How to setup  
 This app is using submodules ( imgui, minhook & [xsip/cs2-sdk-offsets-interfaces-dump](https://github.com/xsip/cs2-sdk-offsets-interfaces-dump)  )  
   So you need to clone with submodules  
