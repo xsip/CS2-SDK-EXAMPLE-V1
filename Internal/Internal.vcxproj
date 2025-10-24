@@ -149,8 +149,11 @@
     <ClCompile Include="Libraries\imgui\imgui_draw.cpp" />
     <ClCompile Include="Libraries\imgui\imgui_tables.cpp" />
     <ClCompile Include="Libraries\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\CS2\ExtendedSDK\C_BasePlayerPawn.cpp" />
+    <ClCompile Include="Source\CS2\Hooks\Client\GetMatrixForView.cpp" />
     <ClCompile Include="Source\CS2\Interfaces\CGameResourceService.cpp" />
     <ClCompile Include="Source\CS2\Rendering\DXHook.cpp" />
+    <ClCompile Include="Source\CS2\Rendering\RenderObjects\EspRenderObject.cpp" />
     <ClCompile Include="Source\Math\Matrix.cpp" />
     <ClCompile Include="Source\Math\QAngle.cpp" />
     <ClCompile Include="Source\Math\Quaternion.cpp" />
@@ -164,11 +167,16 @@
     <ClCompile Include="Source\Utils\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\CS2\Enums\Bones.h" />
+    <ClInclude Include="Include\CS2\ExtendedSDK\C_CSPlayerPawn.h" />
+    <ClInclude Include="Include\CS2\Hooks\Client\GetMatrixForView.h" />
     <ClInclude Include="Include\CS2\Interfaces\CGameEntitySystem.h" />
     <ClInclude Include="Include\CS2\Interfaces\CGameResourceService.h" />
     <ClInclude Include="Include\CS2\Interfaces\Include.h" />
     <ClInclude Include="Include\CS2\Interfaces\Manger\InterfaceManager.h" />
+    <ClInclude Include="Include\CS2\Patterns\Client.h" />
     <ClInclude Include="Include\CS2\Rendering\DXHook.h" />
+    <ClInclude Include="Include\CS2\Rendering\RenderObjects\EspRenderObject.h" />
     <ClInclude Include="Include\Custom\GlobalTypes.hpp" />
     <ClInclude Include="Include\HookHelper\HookHelper.h" />
     <ClInclude Include="Include\Math\Core.h" />

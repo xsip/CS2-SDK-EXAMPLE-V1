@@ -6,9 +6,23 @@
 #include <Steam/GameOverlayRenderer.h>
 #include <Rendering/Renderer.h>
 #include <Utils/Utils.h>
+#include <CS2/Hooks/Client/GetMatrixForView.h>
+#include <CS2/Rendering/RenderObjects/EspRenderObject.h>
+
+ViewMatrix_t Globals::viewMatrix;
 
 auto pRenderer = new Renderer({});
+
 DWORD TestingThread(HMODULE hModule) {
+
+
+    steam::GameOverlayRenderer::HookDX(pRenderer);
+
+
+    CS2::I::Initialize();
+
+    CS2::Hooks::Client::hkGetMatrixForView->Enable(true);
+    pRenderer->AddRenderObject(new CS2::EspRenderObject());
 
     while (!GetAsyncKeyState(VK_DELETE)) {
         if (GetAsyncKeyState(VK_LSHIFT) & 1) {
@@ -21,8 +35,12 @@ DWORD TestingThread(HMODULE hModule) {
 
     ::Utils::RemoveConsoleWindow();
 
+    steam::GameOverlayRenderer::DisablePresentHook();
+    steam::GameOverlayRenderer::RemovePresentHook();
+    
     MH_DisableHook(MH_ALL_HOOKS);
     MH_RemoveHook(MH_ALL_HOOKS);
+    
     FreeLibrary(hModule);
 
     return 0;
@@ -37,11 +55,6 @@ void Setup(HMODULE hModule) {
     printf("Base loaded.\n");
 
     MH_Initialize();
-
-    steam::GameOverlayRenderer::HookDX(pRenderer);
-
-    CS2::I::Initialize();
-
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved) {

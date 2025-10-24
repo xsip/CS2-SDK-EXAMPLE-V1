@@ -13,3 +13,10 @@
 #include <SDK/GlobalTypes.hpp>
 
 #include <Source2/Types/CUtlVector.h>
+#include <Math/Matrix.h>
+
+#define CLIENT_DLL "client.dll"
+
+namespace Globals {
+	extern ViewMatrix_t viewMatrix;
+}

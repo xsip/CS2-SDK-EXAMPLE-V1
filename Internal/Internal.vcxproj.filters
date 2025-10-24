@@ -78,6 +78,15 @@
     <ClCompile Include="Source\CS2\Interfaces\CGameResourceService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\CS2\ExtendedSDK\C_BasePlayerPawn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CS2\Hooks\Client\GetMatrixForView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CS2\Rendering\RenderObjects\EspRenderObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\PCH\Internal.h">
@@ -162,6 +171,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\CS2\Interfaces\Include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CS2\ExtendedSDK\C_CSPlayerPawn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CS2\Enums\Bones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CS2\Rendering\RenderObjects\EspRenderObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CS2\Hooks\Client\GetMatrixForView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CS2\Patterns\Client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
