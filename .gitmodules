@@ -1,0 +1,9 @@
+[submodule "Internal/Libraries/minhook"]
+	path = Internal/Libraries/minhook
+	url = git@github.com:TsudaKageyu/minhook.git
+[submodule "Internal/Libraries/XSIP-CS2-DUMP"]
+	path = Internal/Libraries/XSIP-CS2-DUMP
+	url = https://github.com/xsip/cs2-sdk-offsets-interfaces-dump
+[submodule "Internal/Libraries/imgui"]
+	path = Internal/Libraries/imgui
+	url = git@github.com:ocornut/imgui.git
