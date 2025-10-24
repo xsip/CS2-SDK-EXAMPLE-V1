@@ -55,7 +55,8 @@ namespace GlobalTypes {
 	using CUtlSymbolLarge /*CUtlSymbolLarge*/ = ::Source2::CUtlSymbolLarge; // char[0x8]; //  Schema_Atomic
 	template <typename T1>
 	using CUtlVector /*CUtlVector*/ = ::Source2::CUtlVector<T1>; //  char[0x18]; //  Schema_Atomic
-
+	using QuaternionStorage /*QuaternionStorage*/ = char[0x10]; //  Schema_FixedArray
+	using FourVectors /*FourVectors*/ = char[0x30]; //  Schema_FixedArray
 	template <typename T1>
 	using CHandle /*CHandle*/ =::Source2::CBaseHandle<T1>; //  Schema_Atomic
 	using VectorWS /*VectorWS*/ = char[0xc]; //  Schema_Atomic
