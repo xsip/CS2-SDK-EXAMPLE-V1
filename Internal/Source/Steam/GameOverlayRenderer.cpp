@@ -2,8 +2,10 @@
 #include <Steam/GameOverlayRenderer.h>
 #include <Memory/PatternScan.h>
 #include <Memory/VTableHelper.h>
-#include <D3DX11.h>
+#include <d3dcompiler.h>  
+#include <DirectXMath.h>      
 #include <dxgi.h>
+#include <d3d11.h>
 #include <HookHelper/HookHelper.h>
 #include <imgui/imgui.h>
 #include <imgui/backends/imgui_impl_win32.h>

@@ -1,7 +1,7 @@
 #include <PCH/Internal.h>
 #include <CS2/Rendering/DXHook.h>
 #include <Memory/PatternScan.h>
-#include <D3DX11.h>
+#include <d3d11.h>
 #include <dxgi.h>
 #include <Memory/VTableHelper.h>
 #include <HookHelper/HookHelper.h>
